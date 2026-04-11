@@ -45,5 +45,10 @@ ax.set_ylabel("Goles (Gls)")
 ax.set_zlabel("Asistencias (Ast)")
 plt.title("Segmentación de jugadores Kmeans, k=3")
 
+# Anotaciones interpretativas 
+ax.text(0, 2, 0, "Jugadores de \nBaja participación", color="black")
+ax.text(12, 4, 4.5, "Jugadores de \nParticipación media", color="black")
+ax.text(30, 6, 9, "Jugadores de \nAlto impacto", color="black")
+
 
 plt.show()
