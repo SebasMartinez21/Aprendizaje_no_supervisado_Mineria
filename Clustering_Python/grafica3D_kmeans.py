@@ -22,9 +22,9 @@ print("\nRedondeando: \n", df)
 x = df[["MP", "Gls", "Ast"]]
 
 # ========================================================================================================
-# ⚜️ Entrenar K-Means con k=4 (Por el método del codo) 
+# ⚜️ Entrenar K-Means con k=3 (Por el método del codo) 
 # ========================================================================================================
-kmeans = KMeans(n_clusters=4, random_state=42)
+kmeans = KMeans(n_clusters=3, random_state=42)
 kmeans.fit(x)
 
 df["Cluster"] = kmeans.labels_
@@ -43,7 +43,7 @@ sc = ax.scatter(df["MP"], df["Gls"], df["Ast"],
 ax.set_xlabel("Partidos Jugados (MP)")
 ax.set_ylabel("Goles (Gls)")
 ax.set_zlabel("Asistencias (Ast)")
-plt.title("Segmentación de jugadores Kmeans, k=4")
+plt.title("Segmentación de jugadores Kmeans, k=3")
 
 
 plt.show()
